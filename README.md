@@ -4,4 +4,4 @@
 2. choose the game type either `movie` or `song`
 3. run `go run main.go <gameType> <filename>`
 
-Noted: for the filename, plase fill only the filename don't include the path. Pleas fill like `data.xlsx`
+Noted: for the filename, plase fill only the filename don't include the path. Please fill like `data.xlsx`
