@@ -1,4 +1,4 @@
-package utils
+package function
 
 import (
 	"kahoot/types/payload"
@@ -24,7 +24,8 @@ func MapTableToScoreStruct(rows [][]string) ([]*payload.Score, error) {
 						if j == 0 {
 							score.Rank = value.Ptr(numbers)
 						} else if j == 2 {
-							score.TotalScore = value.Ptr(numbers)
+							totalScore, _ := strconv.Atoi(colCell)
+							score.TotalScore = value.Ptr(int64(totalScore))
 						} else if j == 3 {
 							score.CorrectAnswer = value.Ptr(numbers)
 						} else {
