@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/davecgh/go-spew/spew"
+	"io"
 	"kahoot/types/payload"
 	"log"
 	"net/http"
@@ -23,9 +25,10 @@ func DoReq(addScore *payload.ScoreAdd, token *string) {
 	if err != nil {
 		log.Fatal("UNABLE TO SEND handler-reserve REQUEST")
 	}
-
+	bytes, _ := io.ReadAll(resq.Body)
+	spew.Dump(string(bytes))
 	if resq.StatusCode == 200 {
-		fmt.Printf("GroupNo: %d Nickname: %s Score: %d\n", *addScore.GroupNo, *addScore.Nickname, *addScore.Score)
+		fmt.Printf("GroupNo: %d Nickname: %s Score: %d\n", *addScore.TeamNo, *addScore.Nickname, *addScore.Score)
 		log.Println("Successfully add score")
 	}
 

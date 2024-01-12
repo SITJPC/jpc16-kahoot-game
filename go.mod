@@ -3,6 +3,7 @@ module kahoot
 go 1.21
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/xuri/excelize/v2 v2.8.0
 	gopkg.in/yaml.v3 v3.0.1
 )
