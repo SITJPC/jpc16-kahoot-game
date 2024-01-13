@@ -18,9 +18,8 @@ func MapGroupNickname(str *string, totalScore *int64) *payload.ScoreAdd {
 	}
 
 	addScore := &payload.ScoreAdd{
-		TeamNo:   value.Ptr(int64(TeamNo)),
-		Nickname: value.Ptr(TeamNoNickname[1]),
-		Score:    totalScore,
+		TeamNo: value.Ptr(int64(TeamNo)),
+		Score:  totalScore,
 	}
 
 	return addScore

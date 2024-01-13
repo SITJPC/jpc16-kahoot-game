@@ -12,7 +12,6 @@ type Score struct {
 }
 
 type ScoreAdd struct {
-	TeamNo   *int64  `json:"teamNo"`
-	Nickname *string `json:"nickname"`
-	Score    *int64  `json:"score" `
+	TeamNo *int64 `json:"teamNo"`
+	Score  *int64 `json:"score" `
 }
